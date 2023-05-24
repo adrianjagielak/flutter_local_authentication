@@ -8,14 +8,14 @@ class FlutterLocalAuthentication {
       const MethodChannel('flutter_local_authentication');
 
   static Future<bool> get supportsAuthentication async {
-    if (Platform.isLinux || Platform.isMacOS || Platform.isIOS || Platform.isAndroid) {
+    if (Platform.isMacOS) {
       return await _channel.invokeMethod('supportsAuthentication');
     }
     return false;
   }
 
   static Future<bool> authenticate() async {
-    if (Platform.isLinux || Platform.isMacOS || Platform.isIOS || Platform.isAndroid) {
+    if (Platform.isMacOS) {
       return await _channel.invokeMethod('authenticate');
     }
     return false;
