@@ -39,7 +39,7 @@ public class FlutterLocalAuthenticationPlugin: NSObject, FlutterPlugin {
     }
 
     fileprivate func authenticate(with policy: LAPolicy = .deviceOwnerAuthentication, callback: @escaping (Bool, Error?) -> Void) {
-        let reason = "validate your user's session."
+        let reason = "zweryfikować Twoją tożsamość"
         context.evaluatePolicy(policy, localizedReason: reason, reply: callback)
     }
 }
